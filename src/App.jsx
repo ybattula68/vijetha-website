@@ -8,12 +8,12 @@ function Navbar() {
   return (
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-      background: 'rgba(7,20,7,0.92)', backdropFilter: 'blur(12px)',
+      background: 'rgba(240,250,240,0.95)', backdropFilter: 'blur(12px)',
       borderBottom: '1px solid var(--border)',
       padding: '0 40px', height: 64,
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
     }}>
-      <div style={{ fontWeight: 700, fontSize: 20, color: 'var(--green-light)', letterSpacing: '-0.3px' }}>
+      <div style={{ fontWeight: 700, fontSize: 20, color: 'var(--green-bright)', letterSpacing: '-0.3px' }}>
         Sri Vijetha <span style={{ color: 'var(--text3)', fontWeight: 400 }}>Logistics</span>
       </div>
       <div style={{ display: 'flex', gap: 8 }}>
@@ -46,7 +46,7 @@ function Section({ id, label, children }) {
 function PlaceholderCard({ text }) {
   return (
     <div style={{
-      background: 'var(--green-mid)', border: '1px dashed var(--border)',
+      background: '#fff', border: '1px dashed var(--border)',
       borderRadius: 'var(--radius)', padding: 32, textAlign: 'center',
       color: 'var(--text3)', fontSize: 14, fontStyle: 'italic',
     }}>{text}</div>
@@ -63,7 +63,7 @@ export default function App() {
         minHeight: '100vh', display: 'flex', flexDirection: 'column',
         alignItems: 'center', justifyContent: 'center', textAlign: 'center',
         padding: '100px 40px 60px',
-        background: 'radial-gradient(ellipse at 50% 40%, #163516 0%, #0d200d 50%, #071407 100%)',
+        background: 'radial-gradient(ellipse at 50% 40%, #c8eec8 0%, #dff5df 50%, #f0faf0 100%)',
         borderBottom: '1px solid var(--border)',
       }}>
         {/* Leaf decoration */}
@@ -78,7 +78,7 @@ export default function App() {
           marginBottom: 24, fontFamily: 'IBM Plex Sans, sans-serif',
         }}>
           Sri Vijetha<br />
-          <span style={{ color: 'var(--green-light)' }}>Logistics</span>
+          <span style={{ color: 'var(--green-accent)' }}>Logistics</span>
         </h1>
         <p style={{
           fontSize: 18, color: 'var(--text2)', maxWidth: 520,
@@ -144,7 +144,7 @@ export default function App() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 20 }}>
 
           {/* Founder */}
-          <div style={{ background: 'var(--green-mid)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: 28 }}>
+          <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: 28 }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--green-bright)', textTransform: 'uppercase', letterSpacing: 2, marginBottom: 12 }}>Founder</div>
             <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 16, color: 'var(--text)' }}>Battula Prasad</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -158,7 +158,7 @@ export default function App() {
           </div>
 
           {/* Proprietor */}
-          <div style={{ background: 'var(--green-mid)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: 28 }}>
+          <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: 28 }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--green-bright)', textTransform: 'uppercase', letterSpacing: 2, marginBottom: 12 }}>Proprietor</div>
             <div style={{ fontSize: 18, fontWeight: 600, marginBottom: 16, color: 'var(--text)' }}>Battula Sashank</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -172,7 +172,7 @@ export default function App() {
           </div>
 
           {/* Address */}
-          <div style={{ background: 'var(--green-mid)', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: 28 }}>
+          <div style={{ background: '#fff', border: '1px solid var(--border)', borderRadius: 'var(--radius)', padding: 28 }}>
             <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--green-bright)', textTransform: 'uppercase', letterSpacing: 2, marginBottom: 12 }}>Address</div>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, color: 'var(--text2)', fontSize: 14, lineHeight: 1.8 }}>
               <span style={{ fontSize: 20, marginTop: 2 }}>📍</span>
@@ -185,7 +185,7 @@ export default function App() {
 
       {/* Footer */}
       <footer style={{
-        background: 'var(--green-deep)', borderTop: '1px solid var(--border)',
+        background: '#d4edda', borderTop: '1px solid var(--border)',
         padding: '28px 40px', textAlign: 'center',
         color: 'var(--text3)', fontSize: 13,
       }}>

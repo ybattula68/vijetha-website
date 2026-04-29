@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './index.css';
-import Logo, { LOGOS, LOGO_NAMES } from './Logo.jsx';
+import Logo, { ALL_LOGOS } from './Logo.jsx';
 
 const NAV_LINKS = ['About Us', 'Services', 'Coverage', 'Contact'];
 
@@ -14,7 +14,7 @@ function Navbar() {
       padding: '0 40px', height: 64,
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
     }}>
-      <Logo design={1} theme="light" size={0.85} />
+      <Logo design="1A" theme="light" size={0.85} />
       <div style={{ display: 'flex', gap: 8 }}>
         {NAV_LINKS.map(link => (
           <a key={link} href={`#${link.toLowerCase().replace(' ', '-')}`} style={{
@@ -66,7 +66,7 @@ export default function App() {
         borderBottom: '1px solid var(--border)',
       }}>
         <div style={{ marginBottom: 32 }}>
-          <Logo design={1} theme="light" size={1.4} />
+          <Logo design="1A" theme="light" size={1.4} />
         </div>
         <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--green-bright)', letterSpacing: 3, textTransform: 'uppercase', marginBottom: 16 }}>
           Hyderabad, India
@@ -93,31 +93,45 @@ export default function App() {
         <div style={{ marginTop: 60, color: 'var(--text3)', fontSize: 24, animation: 'bounce 2s infinite' }}>↓</div>
       </div>
 
-      {/* Logo Preview Section */}
-      <div style={{ background: '#e8f5e8', borderBottom: '1px solid var(--border)', padding: '48px 40px' }}>
-        <div style={{ maxWidth: 960, margin: '0 auto' }}>
-          <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--green-accent)', textTransform: 'uppercase', letterSpacing: 3, marginBottom: 8, textAlign: 'center' }}>
-            Logo Options
+      {/* Logo Showcase */}
+      <div style={{ background: '#eaf4ea', borderBottom: '1px solid var(--border)', padding: '56px 40px' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: 48 }}>
+            <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--green-accent)', textTransform: 'uppercase', letterSpacing: 3, marginBottom: 10 }}>Choose Your Logo</div>
+            <div style={{ fontSize: 15, color: 'var(--text3)' }}>3 directions · 2 shapes each · pick what feels right</div>
           </div>
-          <div style={{ fontSize: 14, color: 'var(--text3)', textAlign: 'center', marginBottom: 32 }}>
-            Pick the one you like — we'll use it across the website and dashboard
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
-            {LOGOS.map((LogoComponent, i) => (
-              <div key={i} style={{ background: '#fff', border: '2px solid var(--border)', borderRadius: 'var(--radius)', padding: '28px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--green-accent)', textTransform: 'uppercase', letterSpacing: 1.5 }}>
-                  Option {i + 1}
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 70 }}>
-                  <LogoComponent size={1} theme="light" />
-                </div>
-                <div style={{ background: '#1a4a1a', borderRadius: 'var(--radius-sm)', padding: '14px 16px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <LogoComponent size={0.85} theme="dark" />
-                </div>
-                <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--text3)' }}>{LOGO_NAMES[i]}</div>
+
+          {/* Group headers + pairs */}
+          {[
+            { group: 'Option 1 · Initials "SV"', desc: 'Your initials, shaped into a mark', logos: [ALL_LOGOS[0], ALL_LOGOS[1]] },
+            { group: 'Option 2 · Monogram "SVL"', desc: 'All three initials in one symbol', logos: [ALL_LOGOS[2], ALL_LOGOS[3]] },
+            { group: 'Option 3 · Abstract Geometric', desc: 'No letters — pure shape and movement', logos: [ALL_LOGOS[4], ALL_LOGOS[5]] },
+          ].map(({ group, desc, logos }) => (
+            <div key={group} style={{ marginBottom: 40 }}>
+              <div style={{ marginBottom: 16 }}>
+                <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--text)', marginBottom: 2 }}>{group}</div>
+                <div style={{ fontSize: 12, color: 'var(--text3)' }}>{desc}</div>
               </div>
-            ))}
-          </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                {logos.map(({ component: C, label }) => (
+                  <div key={label} style={{ background: '#fff', border: '1.5px solid var(--border)', borderRadius: 'var(--radius)', overflow: 'hidden' }}>
+                    {/* Light background preview */}
+                    <div style={{ padding: '32px 28px', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 100, background: '#fff' }}>
+                      <C size={1.1} theme="light" />
+                    </div>
+                    {/* Dark background preview */}
+                    <div style={{ padding: '20px 28px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#1e3d2a' }}>
+                      <C size={0.95} theme="dark" />
+                    </div>
+                    {/* Label */}
+                    <div style={{ padding: '10px 16px', background: '#f5faf5', borderTop: '1px solid var(--border)', fontSize: 11, fontWeight: 600, color: 'var(--text3)', textTransform: 'uppercase', letterSpacing: 1 }}>
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './index.css';
+import Logo, { LOGOS, LOGO_NAMES } from './Logo.jsx';
 
 const NAV_LINKS = ['About Us', 'Services', 'Coverage', 'Contact'];
 
@@ -13,9 +14,7 @@ function Navbar() {
       padding: '0 40px', height: 64,
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
     }}>
-      <div style={{ fontWeight: 700, fontSize: 20, color: 'var(--green-bright)', letterSpacing: '-0.3px' }}>
-        Sri Vijetha <span style={{ color: 'var(--text3)', fontWeight: 400 }}>Logistics</span>
-      </div>
+      <Logo design={1} theme="light" size={0.85} />
       <div style={{ display: 'flex', gap: 8 }}>
         {NAV_LINKS.map(link => (
           <a key={link} href={`#${link.toLowerCase().replace(' ', '-')}`} style={{
@@ -66,20 +65,12 @@ export default function App() {
         background: 'radial-gradient(ellipse at 50% 40%, #c8eec8 0%, #dff5df 50%, #f0faf0 100%)',
         borderBottom: '1px solid var(--border)',
       }}>
-        {/* Leaf decoration */}
-        <div style={{ fontSize: 48, marginBottom: 24, opacity: 0.8 }}>🌿</div>
-
-        <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--green-bright)', letterSpacing: 3, textTransform: 'uppercase', marginBottom: 20 }}>
+        <div style={{ marginBottom: 32 }}>
+          <Logo design={1} theme="light" size={1.4} />
+        </div>
+        <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--green-bright)', letterSpacing: 3, textTransform: 'uppercase', marginBottom: 16 }}>
           Hyderabad, India
         </div>
-        <h1 style={{
-          fontSize: 'clamp(36px, 7vw, 72px)', fontWeight: 700,
-          color: 'var(--text)', letterSpacing: '-2px', lineHeight: 1.1,
-          marginBottom: 24, fontFamily: 'IBM Plex Sans, sans-serif',
-        }}>
-          Sri Vijetha<br />
-          <span style={{ color: 'var(--green-accent)' }}>Logistics</span>
-        </h1>
         <p style={{
           fontSize: 18, color: 'var(--text2)', maxWidth: 520,
           lineHeight: 1.7, marginBottom: 40,
@@ -100,6 +91,34 @@ export default function App() {
 
         {/* Down arrow */}
         <div style={{ marginTop: 60, color: 'var(--text3)', fontSize: 24, animation: 'bounce 2s infinite' }}>↓</div>
+      </div>
+
+      {/* Logo Preview Section */}
+      <div style={{ background: '#e8f5e8', borderBottom: '1px solid var(--border)', padding: '48px 40px' }}>
+        <div style={{ maxWidth: 960, margin: '0 auto' }}>
+          <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--green-accent)', textTransform: 'uppercase', letterSpacing: 3, marginBottom: 8, textAlign: 'center' }}>
+            Logo Options
+          </div>
+          <div style={{ fontSize: 14, color: 'var(--text3)', textAlign: 'center', marginBottom: 32 }}>
+            Pick the one you like — we'll use it across the website and dashboard
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+            {LOGOS.map((LogoComponent, i) => (
+              <div key={i} style={{ background: '#fff', border: '2px solid var(--border)', borderRadius: 'var(--radius)', padding: '28px 20px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: 'var(--green-accent)', textTransform: 'uppercase', letterSpacing: 1.5 }}>
+                  Option {i + 1}
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 70 }}>
+                  <LogoComponent size={1} theme="light" />
+                </div>
+                <div style={{ background: '#1a4a1a', borderRadius: 'var(--radius-sm)', padding: '14px 16px', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <LogoComponent size={0.85} theme="dark" />
+                </div>
+                <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--text3)' }}>{LOGO_NAMES[i]}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* About Us */}

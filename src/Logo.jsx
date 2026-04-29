@@ -24,7 +24,7 @@ function Logo1({ size = 1, theme = 'light' }) {
       </svg>
       <div>
         <div style={{ fontSize: 20 * size, fontWeight: 700, color: text, letterSpacing: '-0.5px', lineHeight: 1.1, fontFamily: 'IBM Plex Sans, sans-serif' }}>Sri Vijetha</div>
-        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics</div>
+        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics LLP</div>
       </div>
     </div>
   );
@@ -46,11 +46,11 @@ function Logo2({ size = 1, theme = 'light' }) {
         <text x="50" y="60" textAnchor="middle" fill="white" fontSize="32" fontWeight="700" fontFamily="Georgia, serif">SV</text>
         {/* Bottom tag */}
         <rect x="20" y="94" width="60" height="14" rx="7" fill="#7dcf7d" />
-        <text x="50" y="104" textAnchor="middle" fill="#0d3d0d" fontSize="7.5" fontWeight="700" fontFamily="sans-serif" letterSpacing="1.5">LOGISTICS</text>
+        <text x="50" y="104" textAnchor="middle" fill="#0d3d0d" fontSize="7.5" fontWeight="700" fontFamily="sans-serif" letterSpacing="1.5">LOGISTICS LLP</text>
       </svg>
       <div>
         <div style={{ fontSize: 20 * size, fontWeight: 700, color: text, letterSpacing: '-0.5px', lineHeight: 1.1, fontFamily: 'IBM Plex Sans, sans-serif' }}>Sri Vijetha</div>
-        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics</div>
+        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics LLP</div>
       </div>
     </div>
   );
@@ -82,7 +82,7 @@ function Logo3({ size = 1, theme = 'light' }) {
       </svg>
       <div>
         <div style={{ fontSize: 20 * size, fontWeight: 700, color: text, letterSpacing: '-0.5px', lineHeight: 1.1, fontFamily: 'IBM Plex Sans, sans-serif' }}>Sri Vijetha</div>
-        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics</div>
+        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics LLP</div>
       </div>
     </div>
   );
@@ -107,7 +107,7 @@ function Logo4({ size = 1, theme = 'light' }) {
       </svg>
       <div>
         <div style={{ fontSize: 20 * size, fontWeight: 700, color: text, letterSpacing: '-0.5px', lineHeight: 1.1, fontFamily: 'IBM Plex Sans, sans-serif' }}>Sri Vijetha</div>
-        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics</div>
+        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics LLP</div>
       </div>
     </div>
   );
@@ -134,7 +134,7 @@ function Logo5({ size = 1, theme = 'light' }) {
       <div style={{ display: 'flex', alignItems: 'center', gap: 8 * size, paddingLeft: (28 + 10) * size }}>
         <div style={{ width: 32 * size, height: 2.5, background: '#2d8a2d', borderRadius: 2 }} />
         <div style={{ fontSize: 13 * size, fontWeight: 700, color: '#2d8a2d', letterSpacing: 3, textTransform: 'uppercase', fontFamily: 'IBM Plex Sans, sans-serif' }}>
-          Logistics
+          Logistics LLP
         </div>
         <div style={{ flex: 1, height: 2.5, background: '#2d8a2d', borderRadius: 2 }} />
       </div>
@@ -162,7 +162,7 @@ function Logo6({ size = 1, theme = 'light' }) {
       </svg>
       <div>
         <div style={{ fontSize: 20 * size, fontWeight: 700, color: text, letterSpacing: '-0.5px', lineHeight: 1.1, fontFamily: 'IBM Plex Sans, sans-serif' }}>Sri Vijetha</div>
-        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics</div>
+        <div style={{ fontSize: 11 * size, fontWeight: 600, color: sub, letterSpacing: 2.5, textTransform: 'uppercase' }}>Logistics LLP</div>
       </div>
     </div>
   );

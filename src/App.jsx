@@ -208,8 +208,8 @@ export default function App() {
         padding: '28px 40px', textAlign: 'center',
         color: 'var(--text3)', fontSize: 13,
       }}>
-        <div style={{ fontWeight: 600, color: 'var(--text2)', marginBottom: 6 }}>Sri Vijetha Logistics</div>
-        <div>© {new Date().getFullYear()} Sri Vijetha Logistics Pvt. Ltd. · Hyderabad, India</div>
+        <div style={{ fontWeight: 600, color: 'var(--text2)', marginBottom: 6 }}>Sri Vijetha Logistics LLP</div>
+        <div>© {new Date().getFullYear()} Sri Vijetha Logistics LLP · Hyderabad, India</div>
       </footer>
     </div>
   );
